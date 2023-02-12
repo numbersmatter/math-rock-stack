@@ -6,7 +6,7 @@
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
 ```
-npx create-remix --template numbersmatter/math-rock-stack
+npx create-remix@latest --template numbersmatter/math-rock-stack
 ```
 
 ## Status
