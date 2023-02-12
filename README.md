@@ -10,7 +10,7 @@ npx create-remix --template numbersmatter/math-rock-stack
 ```
 
 ## Status
-This stack is currently in alpha. I was looking for Firebase and GCP stack and could not find one so here is the setup I got working for me.
+This stack is currently in alpha. I was looking for Firebase and GCP stack and could not find one so here is the setup I got working for me. Parts of this README I borrowed from k-pop and indie stack README's because I wanted some consistency following patterns. So if any of this is README is wrong it is because I learned it from Jason! I kid, it is because this is an alpha version and I am copying and pasting. But you can Learn With Jason, @LearnWithJason. Good Stuff!!  
 
 ## What's in the stack
 
