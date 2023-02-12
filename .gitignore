@@ -1,0 +1,7 @@
+node_modules
+service-account.json
+
+/.cache
+/build
+/public/build
+.env
