@@ -1,7 +1,7 @@
 # Remix Math Rock Site!
-![Math Rock site image](https://firebasestorage.googleapis.com/v0/b/component-sites.appspot.com/o/mathrock%2FMath%20Rock%20Stack.jpg?alt=media&token=6a662467-6156-4bf9-8ca3-d6ca6df2cd8d)
+![Math Rock site image](https://raw.githubusercontent.com/numbersmatter/math-rock-stack/master/images/math_rock_banner.jpeg)
 
-Deployed Site: [math-rock-stack](https://)
+
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
