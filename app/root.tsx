@@ -6,6 +6,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
 } from "@remix-run/react";
 
 import styles from "./styles/app.css"
@@ -54,13 +55,35 @@ export default function App() {
   )
 };
 
+// Export a CatchBoundary and use the useCatch hook to handle thrown responses
+// like the 404 we have in our loader.
+// You can also catch thrown responses from actions as well.
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  switch (caught.status) {
+    case 404: {
+      return <h2>Resource not found!</h2>;
+    }
+    default: {
+      // if we don't handle this then all bets are off. Just throw an error
+      // and let the nearest ErrorBoundary handle this
+      throw new Error(`${caught.status} not handled`);
+    }
+  }
+}
+
+// this will handle unexpected errors (like the default case above where the
+// CatchBoundary gets a response it's not prepared to handle).
 export function ErrorBoundary({ error }: { error: Error }) {
+  console.error(error);
+
   return (
-    <Document title="Uh-oh!">
-      <div className="error-container">
-        <h1>App Error {error.name}</h1>
-        <pre>{error.message}</pre>
-      </div>
+    <Document title="I flubbed up...">
+      <pre>{JSON.stringify(error, null, 2)}</pre>
     </Document>
   );
 }
+
+
+
