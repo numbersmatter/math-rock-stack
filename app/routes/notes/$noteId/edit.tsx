@@ -1,9 +1,10 @@
-import { ActionArgs, json, LoaderArgs } from "@remix-run/node";
+import type { ActionArgs, LoaderArgs } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
 import { Form, Link, useActionData, useLoaderData } from "@remix-run/react";
 import { z } from "zod";
 import { requireAuth } from "~/server/auth.server";
-import { addUserNote, getUserNoteById, setUserNote } from "~/server/routes/notes/notes.server";
+import { getUserNoteById, setUserNote } from "~/server/routes/notes/notes.server";
 
 
 export const action = async ({ request ,params }: ActionArgs) => {
