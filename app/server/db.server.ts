@@ -17,21 +17,12 @@ type Todo = {
   title: string;
 };
 
-const db = {
+export type Note = {
+  title: string;
+  body: string;
+}
+
+export const db = {
   userTodos: (uid: string) => dataPoint<Todo>(`users/${uid}/todos`),
-};
-
-export const getUserTodos = async (uid: string) => {
-  const todoSnap = await db.userTodos(uid).get();
-  const todoData = todoSnap.docs.map((doc) => doc.data());
-  return todoData;
-};
-
-export const addTodo = async (uid: string, title: string) => {
-  const newTodoRef = db.userTodos(uid).doc();
-  await newTodoRef.set({ title, id: newTodoRef.id });
-};
-
-export const removeTodo = async (uid: string, todoId: string) => {
-  await db.userTodos(uid).doc(todoId).delete();
+  userNotes: (uid: string) => dataPoint<Note>(`users/${uid}/notes`),
 };
