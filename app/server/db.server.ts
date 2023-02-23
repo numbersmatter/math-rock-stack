@@ -12,10 +12,6 @@ const dataPoint = <T extends FirebaseFirestore.DocumentData>(
   collectionPath: string
 ) => getFirestore().collection(collectionPath).withConverter(converter<T>());
 
-type Todo = {
-  id: string;
-  title: string;
-};
 
 export type Note = {
   title: string;
@@ -23,6 +19,5 @@ export type Note = {
 }
 
 export const db = {
-  userTodos: (uid: string) => dataPoint<Todo>(`users/${uid}/todos`),
   userNotes: (uid: string) => dataPoint<Note>(`users/${uid}/notes`),
 };
