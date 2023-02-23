@@ -2,7 +2,7 @@ import type { LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node"
 import { Link, useLoaderData } from "@remix-run/react"
 import { requireAuth } from "~/server/auth.server"
-import { getAllUserNotes } from "~/server/routes/notes/notes.server"
+import { getAllUserNotes } from "~/server/routes-logic/notes/notes.server"
 
 
 export async function loader({params, request} : LoaderArgs) {

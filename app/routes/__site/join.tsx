@@ -1,6 +1,9 @@
 import type { ActionArgs, LoaderArgs } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
-import { Form, Link, useActionData } from "@remix-run/react";
+import {
+  Form,
+  //  useActionData 
+} from "@remix-run/react";
 import { checkSessionCookie, signUp } from "~/server/auth.server";
 import { commitSession, getSession } from "~/server/sessions";
 import JoinScreen from "~/ui/login/JoinScreen";
@@ -54,7 +57,7 @@ export const action = async ({ request }: ActionArgs) => {
 };
 
 export default function Login() {
-  const actionData = useActionData<typeof action>();
+  // const actionData = useActionData<typeof action>();
   return (
     <Form method="post">
       <JoinScreen />

@@ -4,7 +4,7 @@ import { redirect } from "@remix-run/node";
 import { Form, useActionData } from "@remix-run/react";
 import { z } from "zod";
 import { requireAuth } from "~/server/auth.server";
-import { addUserNote } from "~/server/routes/notes/notes.server";
+import { addUserNote } from "~/server/routes-logic/notes/notes.server";
 
 
 export const action = async ({request}: ActionArgs) => {

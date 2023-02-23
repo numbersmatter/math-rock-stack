@@ -7,13 +7,13 @@ import {
 } from "@remix-run/react";
 import { useCallback, useState } from "react";
 
-import * as firebaseRest from "../server/firebase-rest";
+import * as firebaseRest from "~/server/firebase-rest";
 import {
   checkSessionCookie,
   signIn,
   signInWithToken,
 } from "~/server/auth.server";
-import { commitSession, getSession } from "../server/sessions";
+import { commitSession, getSession } from "~/server/sessions";
 import { getRestConfig } from "~/server/firebase.server";
 import LoginScreen from "~/ui/login/LoginScreen";
 
